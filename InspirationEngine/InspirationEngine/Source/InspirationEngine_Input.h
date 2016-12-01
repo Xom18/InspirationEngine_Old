@@ -2,26 +2,29 @@
 #include <SDL/SDL.h>
 #include "InspirationEngine_Math.h"
 
+enum MOUSE_STATE
+{
+	LEFT = 1,
+	MIDDLE = 2,
+	RIGHT = 3
+};
+
 class Input
 {
-	struct Mouse{
-		Uint32* type;
-		Uint32* timestamp;
-		Uint32* windowID;
-		Uint32* which;
-		Uint32* state;
-		Sint32* x;
-		Sint32* y;
-		Sint32* deltaX;
-		Sint32* deltaY;
+	struct Mouse
+	{
+		bool button[3];
+		Vector2_Int position;
+		Vector2_Int deltaPosition;
 	};
 public:
-	void Start(SDL_Event* sdl_event);
-	void Update();
+	void Start(SDL_Event* _sdl_event);
+	void MouseUpdate();
+	void MouseDeltaReset();
 	const Uint8* keyInput;
 	Mouse mouse;
-	//SDL_MouseMotionEvent mouse;
-	SDL_Event* s_event;
-	int a;
+	SDL_Event* sdl_event;
 private:
+	void MouseMoveUpdate();
+	void MouseButtonUpdate();
 };

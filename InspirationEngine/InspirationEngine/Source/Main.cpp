@@ -23,18 +23,15 @@ int main(int argc, char* argv[])
 
 	while (!display.Closed())
 	{
+		input.MouseDeltaReset();
+		//SDL_WaitEventTimeout(&sdl_event, 30);
 		while(SDL_PollEvent(&sdl_event))
 		{
-			switch(sdl_event.type)
-			{
-			case SDL_MOUSEMOTION:
-				int i = 0;
-				i += 1;
-				break;
-			}
+			input.MouseUpdate();
+			display.Render();
+			
 			SDL_UpdateTexture(display.GetTexture(0), NULL, display.GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
 		}
-		SDL_WaitEventTimeout(&sdl_event, 30);
 
 		display.Render();
 	}
