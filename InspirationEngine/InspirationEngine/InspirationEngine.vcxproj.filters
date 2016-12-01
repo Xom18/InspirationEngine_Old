@@ -33,6 +33,9 @@
     <ClCompile Include="Source\Main.cpp">
       <Filter>Sources</Filter>
     </ClCompile>
+    <ClCompile Include="Source\InspirationEngine_Math.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\InspirationEngine.h">
@@ -48,6 +51,9 @@
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Source\InspirationEngine_ReadFile.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\InspirationEngine_Math.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

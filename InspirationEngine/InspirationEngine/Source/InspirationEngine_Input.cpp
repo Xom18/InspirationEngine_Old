@@ -1,11 +1,15 @@
 #include "InspirationEngine_Input.h"
 
-void Input::Start()
+void Input::Start(SDL_Event* sdl_event)
 {
 	keyInput = SDL_GetKeyboardState(NULL);
+	
+	//mouse.x = sdl_event->motion.x;
+	mouse.x = sdl_event->motion.x;
+	//mouse.x = &(sdl_event->motion.x);
 }
 
-const Uint8* Input::GetKeyInput()
+void Input::Update()
 {
-	return keyInput;
+//	a = s_event->motion.x;
 }

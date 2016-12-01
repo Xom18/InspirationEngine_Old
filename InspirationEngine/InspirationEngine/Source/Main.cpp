@@ -8,15 +8,13 @@
 int main(int argc, char* argv[])
 {
 	SDL_Event sdl_event;
-	std::thread* inputThread;
 	Display display("Inspiration", SCREEN_WIDTH, SCREEN_HEIGHT, 2);
 	
 	Image tileSet; // Tileset Image
 	Tile tile; // Tile
-
 	Input input;
-	input.Start();
 
+	input.Start(&sdl_event);
 	tileSet.ReadBMP("../Release/file.bmp");
 	tile.ImageToTile(tileSet, 16);
 	
@@ -25,9 +23,18 @@ int main(int argc, char* argv[])
 
 	while (!display.Closed())
 	{
-		SDL_UpdateTexture(display.GetTexture(0), NULL, display.GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
+		while(SDL_PollEvent(&sdl_event))
+		{
+			switch(sdl_event.type)
+			{
+			case SDL_MOUSEMOTION:
+				int x = sdl_event.motion.x;
+				break;
+			}
+			SDL_UpdateTexture(display.GetTexture(0), NULL, display.GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
+		}
 		SDL_WaitEventTimeout(&sdl_event, 30);
-		
+
 		display.Render();
 	}
 	SDL_Quit();
