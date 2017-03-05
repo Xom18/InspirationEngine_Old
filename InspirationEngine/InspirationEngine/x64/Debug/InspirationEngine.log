@@ -1,0 +1,84 @@
+﻿LINK : error LNK2001: main 외부 기호를 확인할 수 없습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_CreateWindow 외부 기호(참조 위치: "public: __cdecl Display::Display(char *,int,int,int)" (??0Display@@QEAA@PEADHHH@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_DestroyWindow 외부 기호(참조 위치: "public: __cdecl Display::~Display(void)" (??1Display@@QEAA@XZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_CreateRenderer 외부 기호(참조 위치: "public: __cdecl Display::Display(char *,int,int,int)" (??0Display@@QEAA@PEADHHH@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_CreateTexture 외부 기호(참조 위치: "public: __cdecl Display::Display(char *,int,int,int)" (??0Display@@QEAA@PEADHHH@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_RenderCopy 외부 기호(참조 위치: "public: void __cdecl Display::Render(void)" (?Render@Display@@QEAAXXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_RenderPresent 외부 기호(참조 위치: "public: void __cdecl Display::Render(void)" (?Render@Display@@QEAAXXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_DestroyTexture 외부 기호(참조 위치: "public: __cdecl Display::~Display(void)" (??1Display@@QEAA@XZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_DestroyRenderer 외부 기호(참조 위치: "public: __cdecl Display::~Display(void)" (??1Display@@QEAA@XZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: SDL_Init 외부 기호(참조 위치: "public: __cdecl Display::Display(char *,int,int,int)" (??0Display@@QEAA@PEADHHH@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_Display.obj : error LNK2019: memset 외부 기호(참조 위치: "public: __cdecl Display::Display(char *,int,int,int)" (??0Display@@QEAA@PEADHHH@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2001: memset 외부 기호를 확인할 수 없습니다.
+InspirationEngine_Image.obj : error LNK2001: __CxxFrameHandler3 외부 기호를 확인할 수 없습니다.
+InspirationEngine_ReadFile.obj : error LNK2001: __CxxFrameHandler3 외부 기호를 확인할 수 없습니다.
+msvcprtd.lib(locale0_implib.obj) : error LNK2001: __CxxFrameHandler3 외부 기호를 확인할 수 없습니다.
+MSVCRTD.lib(gshandlereh.obj) : error LNK2001: __CxxFrameHandler3 외부 기호를 확인할 수 없습니다.
+InspirationEngine_Input.obj : error LNK2019: SDL_GetKeyboardState 외부 기호(참조 위치: "public: void __cdecl Input::Start(void)" (?Start@Input@@QEAAXXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp__invalid_parameter 외부 기호(참조 위치: "public: char const & __cdecl std::_String_const_iterator<class std::_String_val<struct std::_Simple_types<char> > >::operator*(void)const " (??D?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@QEBAAEBDXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp__invalid_parameter_noinfo 외부 기호(참조 위치: memcpy_s 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp__errno 외부 기호(참조 위치: memcpy_s 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp__get_stream_buffer_pointers 외부 기호(참조 위치: "protected: void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::_Init(struct _iobuf *,enum std::basic_filebuf<char,struct std::char_traits<char> >::_Initfl)" (?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IEAAXPEAU_iobuf@@W4_Initfl@12@@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_fclose 외부 기호(참조 위치: "public: class std::basic_filebuf<char,struct std::char_traits<char> > * __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::close(void)" (?close@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QEAAPEAV12@XZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_fflush 외부 기호(참조 위치: "protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::sync(void)" (?sync@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_fgetc 외부 기호(참조 위치: "bool __cdecl std::_Fgetc<char>(char &,struct _iobuf *)" (??$_Fgetc@D@std@@YA_NAEADPEAU_iobuf@@@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_fgetpos 외부 기호(참조 위치: "protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int)" (?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@_JHH@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_fputc 외부 기호(참조 위치: "bool __cdecl std::_Fputc<char>(char,struct _iobuf *)" (??$_Fputc@D@std@@YA_NDPEAU_iobuf@@@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_fsetpos 외부 기호(참조 위치: "protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::seekpos(class std::fpos<struct _Mbstatet>,int)" (?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@V32@H@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp__fseeki64 외부 기호(참조 위치: "protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int)" (?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@_JHH@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_fwrite 외부 기호(참조 위치: "protected: bool __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::_Endwrite(void)" (?_Endwrite@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IEAA_NXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_setvbuf 외부 기호(참조 위치: "protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::setbuf(char *,__int64)" (?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PEAD_J@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_ungetc 외부 기호(참조 위치: "bool __cdecl std::_Ungetc<char>(char const &,struct _iobuf *)" (??$_Ungetc@D@std@@YA_NAEBDPEAU_iobuf@@@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp__lock_file 외부 기호(참조 위치: "public: virtual void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::_Lock(void)" (?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAXXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp__unlock_file 외부 기호(참조 위치: "public: virtual void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::_Unlock(void)" (?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAXXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: memcpy 외부 기호(참조 위치: "public: static char * __cdecl std::char_traits<char>::copy(char *,char const *,unsigned __int64)" (?copy@?$char_traits@D@std@@SAPEADPEADPEBD_K@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp_memmove 외부 기호(참조 위치: "public: static char * __cdecl std::char_traits<char>::move(char *,char const *,unsigned __int64)" (?move@?$char_traits@D@std@@SAPEADPEADPEBD_K@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp___std_exception_copy 외부 기호(참조 위치: "public: __cdecl std::exception::exception(class std::exception const &)" (??0exception@std@@QEAA@AEBV01@@Z) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp___std_exception_destroy 외부 기호(참조 위치: "public: virtual __cdecl std::exception::~exception(void)" (??1exception@std@@UEAA@XZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: __imp__CrtDbgReportW 외부 기호(참조 위치: "public: char const & __cdecl std::_String_const_iterator<class std::_String_val<struct std::_Simple_types<char> > >::operator*(void)const " (??D?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@QEBAAEBDXZ) 함수)에서 확인하지 못했습니다.
+InspirationEngine_ReadFile.obj : error LNK2019: _CxxThrowException 외부 기호(참조 위치: "class std::codecvt<char,char,struct _Mbstatet> const & __cdecl std::use_facet<class std::codecvt<char,char,struct _Mbstatet> >(class std::locale const &)" (??$use_facet@V?$codecvt@DDU_Mbstatet@@@std@@@std@@YAAEBV?$codecvt@DDU_Mbstatet@@@0@AEBVlocale@0@@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2001: _CxxThrowException 외부 기호를 확인할 수 없습니다.
+Main.obj : error LNK2019: SDL_WaitEventTimeout 외부 기호(참조 위치: SDL_main 함수)에서 확인하지 못했습니다.
+Main.obj : error LNK2019: SDL_SetTextureBlendMode 외부 기호(참조 위치: SDL_main 함수)에서 확인하지 못했습니다.
+Main.obj : error LNK2019: SDL_UpdateTexture 외부 기호(참조 위치: SDL_main 함수)에서 확인하지 못했습니다.
+Main.obj : error LNK2019: SDL_Quit 외부 기호(참조 위치: SDL_main 함수)에서 확인하지 못했습니다.
+msvcprtd.lib(locale0_implib.obj) : error LNK2019: __imp__free_dbg 외부 기호(참조 위치: "public: static void __cdecl std::_Fac_node::operator delete(void *)" (??3_Fac_node@std@@SAXPEAX@Z) 함수)에서 확인하지 못했습니다.
+msvcprtd.lib(locale0_implib.obj) : error LNK2019: __imp__malloc_dbg 외부 기호(참조 위치: "public: static void * __cdecl std::_Fac_node::operator new(unsigned __int64)" (??2_Fac_node@std@@SAPEAX_K@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(_init_.obj) : error LNK2019: _CrtDbgReport 외부 기호(참조 위치: _CRT_RTC_INIT 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(_init_.obj) : error LNK2019: _CrtDbgReportW 외부 기호(참조 위치: _CRT_RTC_INITW 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(new_scalar.obj) : error LNK2019: _callnewh 외부 기호(참조 위치: "void * __cdecl operator new(unsigned __int64)" (??2@YAPEAX_K@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(new_scalar.obj) : error LNK2019: malloc 외부 기호(참조 위치: "void * __cdecl operator new(unsigned __int64)" (??2@YAPEAX_K@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(delete_scalar.obj) : error LNK2019: _free_dbg 외부 기호(참조 위치: "void __cdecl operator delete(void *)" (??3@YAXPEAX@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __vcrt_initialize 외부 기호(참조 위치: __scrt_initialize_crt 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __vcrt_uninitialize 외부 기호(참조 위치: __scrt_initialize_crt 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __vcrt_uninitialize_critical 외부 기호(참조 위치: __scrt_dllmain_uninitialize_critical 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __vcrt_thread_attach 외부 기호(참조 위치: __scrt_dllmain_crt_thread_attach 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __vcrt_thread_detach 외부 기호(참조 위치: __scrt_dllmain_crt_thread_attach 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _seh_filter_dll 외부 기호(참조 위치: __scrt_dllmain_exception_filter 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _is_c_termination_complete 외부 기호(참조 위치: __scrt_dllmain_uninitialize_c 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _configure_narrow_argv 외부 기호(참조 위치: "public: static int __cdecl __scrt_narrow_argv_policy::configure_argv(void)" (?configure_argv@__scrt_narrow_argv_policy@@SAHXZ) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _initialize_narrow_environment 외부 기호(참조 위치: __scrt_dllmain_after_initialize_c 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _initialize_onexit_table 외부 기호(참조 위치: __scrt_initialize_onexit_tables 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _register_onexit_function 외부 기호(참조 위치: _onexit 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _execute_onexit_table 외부 기호(참조 위치: __scrt_dllmain_uninitialize_c 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _crt_atexit 외부 기호(참조 위치: _onexit 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _crt_at_quick_exit 외부 기호(참조 위치: at_quick_exit 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __acrt_initialize 외부 기호(참조 위치: __scrt_initialize_crt 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __acrt_uninitialize 외부 기호(참조 위치: __scrt_uninitialize_crt 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __acrt_uninitialize_critical 외부 기호(참조 위치: __scrt_dllmain_uninitialize_critical 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __acrt_thread_attach 외부 기호(참조 위치: __scrt_dllmain_crt_thread_attach 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: __acrt_thread_detach 외부 기호(참조 위치: __scrt_dllmain_crt_thread_detach 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2019: _cexit 외부 기호(참조 위치: __scrt_dllmain_uninitialize_c 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility.obj) : error LNK2001: __C_specific_handler 외부 기호를 확인할 수 없습니다.
+MSVCRTD.lib(_error_.obj) : error LNK2001: __C_specific_handler 외부 기호를 확인할 수 없습니다.
+MSVCRTD.lib(_error_.obj) : error LNK2019: __stdio_common_vsprintf_s 외부 기호(참조 위치: _vsprintf_s_l 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2019: __std_exception_copy 외부 기호(참조 위치: "public: __cdecl std::exception::exception(class std::exception const &)" (??0exception@std@@QEAA@AEBV01@@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2019: __std_exception_destroy 외부 기호(참조 위치: "public: virtual __cdecl std::exception::~exception(void)" (??1exception@std@@UEAA@XZ) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(utility_desktop.obj) : error LNK2019: terminate 외부 기호(참조 위치: __scrt_unhandled_exception_filter 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: _wmakepath_s 외부 기호(참조 위치: "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned __int64)" (?GetPdbDllPathFromFilePath@@YAHPEB_WPEA_W_K@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: _wsplitpath_s 외부 기호(참조 위치: "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned __int64)" (?GetPdbDllPathFromFilePath@@YAHPEB_WPEA_W_K@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: wcscpy_s 외부 기호(참조 위치: "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned __int64)" (?GetPdbDllPathFromFilePath@@YAHPEB_WPEA_W_K@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: __vcrt_GetModuleFileNameW 외부 기호(참조 위치: "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPEAUHINSTANCE__@@XZ) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: __vcrt_GetModuleHandleW 외부 기호(참조 위치: "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPEAUHINSTANCE__@@XZ) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: __vcrt_LoadLibraryExW 외부 기호(참조 위치: "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPEAUHINSTANCE__@@XZ) 함수)에서 확인하지 못했습니다.
+D:\SystemFolder\Documents\GitHub\InspirationEngine\InspirationEngine\x64\Debug\InspirationEngine.exe : fatal error LNK1120: 77개의 확인할 수 없는 외부 참조입니다.
