@@ -1,3 +1,5 @@
+#include <SDL/SDL.h>
+#include <fstream>
 #include "InspirationEngine_ReadFile.h"
 
 void ReadFile(char** buffer, int* size, const char* filename)

@@ -1,15 +1,12 @@
 #pragma once
-#include <SDL\SDL.h>
-#include <thread>
-#include "InspirationEngine_Display.h"
-#include "InspirationEngine_Image.h"
-#include "InspirationEngine_ReadFile.h"
-#include "InspirationEngine_Input.h"
 
+class Input;
+class Display;
 class InspirationEngine
 {
 public:
-	Input input;
-	Display display;
+	SDL_Event* sdl_event;
+	Input* input;
+	Display* display;
 
 };

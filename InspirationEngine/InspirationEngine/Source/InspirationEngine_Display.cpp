@@ -1,3 +1,5 @@
+#include <SDL/SDL.h>
+#include <iostream>
 #include "InspirationEngine_Display.h"
 
 Display::Display(char *title, int width, int height, int layerCount)

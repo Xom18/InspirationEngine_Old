@@ -29,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\InspirationEngine.h" />
+    <ClInclude Include="Source\InspirationEngineHeaders.h" />
     <ClInclude Include="Source\InspirationEngine_Display.h" />
     <ClInclude Include="Source\InspirationEngine_Image.h" />
     <ClInclude Include="Source\InspirationEngine_Input.h" />
@@ -51,7 +52,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>

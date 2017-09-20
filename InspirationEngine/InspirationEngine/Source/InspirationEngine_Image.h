@@ -1,7 +1,5 @@
 #pragma once
 
-#include "InspirationEngine_ReadFile.h"
-
 class Image
 {
 public:

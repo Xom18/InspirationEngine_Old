@@ -1,11 +1,10 @@
 #pragma once
 
-#include <SDL/SDL.h>
-#include <iostream>
-
+class InspirationEngine;
 class Display
 {
 public:
+	InspirationEngine* parent;
 	Display(char* title, int width, int height, int layerCount);
 	~Display();
 

@@ -3,37 +3,49 @@
 #define MAP_SIZE 30
 #define TILE_SIZE 4
 
-#include "InspirationEngine.h"
+#ifdef UNICODE
+#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console") 
+#else
+#pragma comment(linker, "/entry:WinMainCRTStartup /subsystem:console") 
+#endif
+
+#include "InspirationEngineHeaders.h"
 
 int main(int argc, char* argv[])
 {
-	SDL_Event sdl_event;
-	Display display("Inspiration", SCREEN_WIDTH, SCREEN_HEIGHT, 2);
-	
+//	SDL_Event sdl_event;
+	InspirationEngine* engine = new InspirationEngine();
+	engine->sdl_event = new SDL_Event;
+	engine->display = new Display("Inspiration", SCREEN_WIDTH, SCREEN_HEIGHT, 2);
+	engine->input = new Input();
+	engine->display->parent = engine;
+	engine->input->parent = engine;
+
 	Image tileSet; // Tileset Image
 	Tile tile; // Tile
-	Input input;
+//	Input input;
 
-	input.Start(&sdl_event);
+//	input.Start(&sdl_event);
 	tileSet.ReadBMP("../Release/file.bmp");
 	tile.ImageToTile(tileSet, 16);
 	
-	display.Render();
-	SDL_SetTextureBlendMode(display.GetTexture(1), SDL_BLENDMODE_BLEND);
+	engine->display->Render();
+	SDL_SetTextureBlendMode(engine->display->GetTexture(1), SDL_BLENDMODE_BLEND);
 
-	while (!display.Closed())
+	while (!engine->display->Closed())
 	{
-		input.MouseDeltaReset();
-		//SDL_WaitEventTimeout(&sdl_event, 30);
-		while(SDL_PollEvent(&sdl_event))
+		engine->input->MouseDeltaReset();
+		while(SDL_PollEvent(engine->sdl_event))
 		{
-			input.MouseUpdate();
-			display.Render();
+			if(engine->sdl_event->type == SDL_QUIT)
+				SDL_Quit();
+			engine->input->MouseUpdate();
+			engine->display->Render();
 			
-			SDL_UpdateTexture(display.GetTexture(0), NULL, display.GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
+			SDL_UpdateTexture(engine->display->GetTexture(0), NULL, engine->display->GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
 		}
 
-		display.Render();
+		engine->display->Render();
 	}
 	SDL_Quit();
 	return 0;

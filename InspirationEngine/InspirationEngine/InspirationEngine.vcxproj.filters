@@ -56,5 +56,8 @@
     <ClInclude Include="Source\InspirationEngine_Math.h">
       <Filter>Header</Filter>
     </ClInclude>
+    <ClInclude Include="Source\InspirationEngineHeaders.h">
+      <Filter>Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

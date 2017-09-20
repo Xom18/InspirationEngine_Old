@@ -1,3 +1,6 @@
+#include <SDL\SDL.h>
+#include <fstream>
+#include "InspirationEngine_ReadFile.h"
 #include "InspirationEngine_Image.h"
 
 Image::Image()

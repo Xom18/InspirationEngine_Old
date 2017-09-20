@@ -1,6 +1,4 @@
 #pragma once
-#include <SDL/SDL.h>
-#include "InspirationEngine_Math.h"
 
 enum MOUSE_STATE
 {
@@ -8,7 +6,7 @@ enum MOUSE_STATE
 	MIDDLE = 2,
 	RIGHT = 3
 };
-
+class InspirationEngine;
 class Input
 {
 	struct Mouse
@@ -18,12 +16,12 @@ class Input
 		Vector2_Int deltaPosition;
 	};
 public:
+	InspirationEngine* parent;
 	void Start(SDL_Event* _sdl_event);
 	void MouseUpdate();
 	void MouseDeltaReset();
 	const Uint8* keyInput;
 	Mouse mouse;
-	SDL_Event* sdl_event;
 private:
 	void MouseMoveUpdate();
 	void MouseButtonUpdate();
