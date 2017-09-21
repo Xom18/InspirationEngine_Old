@@ -1,12 +1,18 @@
 #pragma once
 
 class Input;
-class Display;
+class Window;
 class InspirationEngine
 {
 public:
+	InspirationEngine();
+	~InspirationEngine();
 	SDL_Event* sdl_event;
 	Input* input;
-	Display* display;
+	Window* window;
+	void SetQuit();
+	bool IsQuit();
 
+private:
+	bool quit;
 };

@@ -1,28 +1,27 @@
 #pragma once
 
+class InspirationEngine;
 enum MOUSE_STATE
 {
 	LEFT = 1,
 	MIDDLE = 2,
 	RIGHT = 3
 };
-class InspirationEngine;
-class Input
+class Input : public InspirationEngine_Modul
 {
 	struct Mouse
 	{
 		bool button[3];
-		Vector2_Int position;
-		Vector2_Int deltaPosition;
+		IVec2 position;
+		IVec2 deltaPosition;
 	};
 public:
-	InspirationEngine* parent;
-	void Start(SDL_Event* _sdl_event);
-	void MouseUpdate();
-	void MouseDeltaReset();
-	const Uint8* keyInput;
+	~Input();
+//	InspirationEngine* parent;
+	void Start();
+	const Uint8* keyboard;
 	Mouse mouse;
 private:
-	void MouseMoveUpdate();
-	void MouseButtonUpdate();
+	void MouseUpdate(int mEvent);
+	void InputThread();
 };

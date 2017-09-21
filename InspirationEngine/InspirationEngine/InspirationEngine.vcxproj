@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\InspirationEngine.cpp" />
-    <ClCompile Include="Source\InspirationEngine_Display.cpp" />
+    <ClCompile Include="Source\InspirationEngine_Window.cpp" />
     <ClCompile Include="Source\InspirationEngine_Image.cpp" />
     <ClCompile Include="Source\InspirationEngine_Input.cpp" />
     <ClCompile Include="Source\InspirationEngine_Math.cpp" />
@@ -30,10 +30,11 @@
   <ItemGroup>
     <ClInclude Include="Source\InspirationEngine.h" />
     <ClInclude Include="Source\InspirationEngineHeaders.h" />
-    <ClInclude Include="Source\InspirationEngine_Display.h" />
+    <ClInclude Include="Source\InspirationEngine_Window.h" />
     <ClInclude Include="Source\InspirationEngine_Image.h" />
     <ClInclude Include="Source\InspirationEngine_Input.h" />
     <ClInclude Include="Source\InspirationEngine_Math.h" />
+    <ClInclude Include="Source\InspirationEngine_Modul.h" />
     <ClInclude Include="Source\InspirationEngine_ReadFile.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

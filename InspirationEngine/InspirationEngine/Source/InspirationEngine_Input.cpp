@@ -1,55 +1,54 @@
 #include <SDL/SDL.h>
+#include <iostream>
+#include <thread>
 #include "InspirationEngine.h"
+#include "InspirationEngine_Modul.h"
+#include "InspirationEngine_Window.h"
 #include "InspirationEngine_Math.h"
 #include "InspirationEngine_Input.h"
-#include <iostream>
 
-void Input::Start(SDL_Event* _sdl_event)
+Input::~Input()
 {
-	keyInput = SDL_GetKeyboardState(NULL);
+	trd->join();
+}
+
+void Input::Start()
+{
+	keyboard = SDL_GetKeyboardState(NULL);
 	for(int i = 0; i < 3; ++i)
 		mouse.button[i] = 0;
-	parent->sdl_event = _sdl_event;
+	mouse.position = mouse.deltaPosition = 0;
+	
+	trd = new std::thread([&](){InputThread();});
 }
 
-void Input::MouseUpdate()
+void Input::InputThread()
 {
-	switch (parent->sdl_event->type)
+	while(!engine->IsQuit())
 	{
-		case SDL_MOUSEMOTION:
-			MouseMoveUpdate();
-		break;
-
-		case SDL_MOUSEBUTTONUP:
-		case SDL_MOUSEBUTTONDOWN:
-			MouseButtonUpdate();
-		break;
+		if(engine->sdl_event->type & SDL_MOUSEMOTION)
+			MouseUpdate(engine->sdl_event->type - SDL_MOUSEMOTION);
 	}
-	printf("%d / %d / %d / %d\n", mouse.position.x, mouse.position.y, mouse.button[0], mouse.button[1]);
+	printf("InputThread Quit\n");
 }
 
-void Input::MouseDeltaReset()
+void Input::MouseUpdate(int mEvent)
 {
-	mouse.deltaPosition.x = 0;
-	mouse.deltaPosition.y = 0;
-}
-
-void Input::MouseMoveUpdate()
-{
-	mouse.position.x = parent->sdl_event->motion.x;
-	mouse.position.y = parent->sdl_event->motion.y;
-	mouse.deltaPosition.x = parent->sdl_event->motion.xrel;
-	mouse.deltaPosition.y = parent->sdl_event->motion.yrel;
-}
-
-void Input::MouseButtonUpdate()
-{
-	mouse.position.x = parent->sdl_event->button.x;
-	mouse.position.y = parent->sdl_event->button.y;
-	mouse.deltaPosition.x = parent->sdl_event->motion.xrel;
-	mouse.deltaPosition.y = parent->sdl_event->motion.yrel;
-	if(parent->sdl_event->button.state)
-		mouse.button[parent->sdl_event->button.button - 1] = true;
+	if(mEvent == 0)
+	{
+		mouse.position.x = engine->sdl_event->motion.x;
+		mouse.position.y = engine->window->GetScreenHeight() - engine->sdl_event->motion.y;
+		mouse.deltaPosition.x = engine->sdl_event->motion.xrel;
+		mouse.deltaPosition.y = -engine->sdl_event->motion.yrel;
+	}
 	else
-		mouse.button[parent->sdl_event->button.button - 1] = false;
+	{
+		mouse.position.x = engine->sdl_event->button.x;
+		mouse.position.y = engine->window->GetScreenHeight() - engine->sdl_event->button.y;
+
+		if (engine->sdl_event->button.state)
+			mouse.button[engine->sdl_event->button.button - 1] = true;
+		else
+			mouse.button[engine->sdl_event->button.button - 1] = false;
+	}
 }

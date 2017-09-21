@@ -16,10 +16,13 @@ int main(int argc, char* argv[])
 //	SDL_Event sdl_event;
 	InspirationEngine* engine = new InspirationEngine();
 	engine->sdl_event = new SDL_Event;
-	engine->display = new Display("Inspiration", SCREEN_WIDTH, SCREEN_HEIGHT, 2);
+	engine->window = new Window("Inspiration", SCREEN_WIDTH, SCREEN_HEIGHT, 2);
 	engine->input = new Input();
-	engine->display->parent = engine;
-	engine->input->parent = engine;
+
+	engine->window->engine = engine;
+	engine->input->engine = engine;
+
+	engine->input->Start();
 
 	Image tileSet; // Tileset Image
 	Tile tile; // Tile
@@ -29,24 +32,23 @@ int main(int argc, char* argv[])
 	tileSet.ReadBMP("../Release/file.bmp");
 	tile.ImageToTile(tileSet, 16);
 	
-	engine->display->Render();
-	SDL_SetTextureBlendMode(engine->display->GetTexture(1), SDL_BLENDMODE_BLEND);
+	engine->window->Render();
+	SDL_SetTextureBlendMode(engine->window->GetTexture(1), SDL_BLENDMODE_BLEND);
 
-	while (!engine->display->Closed())
+	while (!engine->IsQuit())
 	{
-		engine->input->MouseDeltaReset();
 		while(SDL_PollEvent(engine->sdl_event))
 		{
-			if(engine->sdl_event->type == SDL_QUIT)
-				SDL_Quit();
-			engine->input->MouseUpdate();
-			engine->display->Render();
+			if (engine->sdl_event->type == SDL_QUIT)
+				engine->SetQuit();
+			engine->window->Render();
 			
-			SDL_UpdateTexture(engine->display->GetTexture(0), NULL, engine->display->GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
+			SDL_UpdateTexture(engine->window->GetTexture(0), NULL, engine->window->GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
 		}
-
-		engine->display->Render();
+		engine->window->Render();
 	}
+	delete engine;
 	SDL_Quit();
+	printf("¿©À¸±â\n");
 	return 0;
 }
