@@ -13,7 +13,18 @@
 
 int main(int argc, char* argv[])
 {
-//	SDL_Event sdl_event;
+	SDL_Rect rect;
+	SDL_Rect rectP;
+	rect.h = 16;
+	rect.w = 16;
+	rect.x = 0;
+	rect.y = 8;
+
+	rectP.h = 16;
+	rectP.w = 16;
+	rectP.x = 0;
+	rectP.y = 0;
+
 	InspirationEngine* engine = new InspirationEngine();
 	engine->sdl_event = new SDL_Event;
 	engine->window = new Window("Inspiration", SCREEN_WIDTH, SCREEN_HEIGHT, 2);
@@ -37,18 +48,17 @@ int main(int argc, char* argv[])
 
 	while (!engine->IsQuit())
 	{
-		while(SDL_PollEvent(engine->sdl_event))
-		{
-			if (engine->sdl_event->type == SDL_QUIT)
-				engine->SetQuit();
-			engine->window->Render();
+		SDL_PollEvent(engine->sdl_event);
+		if (engine->sdl_event->type == SDL_QUIT)
+			engine->SetQuit();
+
+		SDL_UpdateTexture(engine->window->GetTexture(0), &rect, tile.GetData(1), 16 * sizeof(Uint32));
+
 			
-			SDL_UpdateTexture(engine->window->GetTexture(0), NULL, engine->window->GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
-		}
+//			SDL_UpdateTexture(engine->window->GetTexture(0), NULL, engine->window->GetGraphicBuffer(), SCREEN_WIDTH * sizeof(Uint32));
 		engine->window->Render();
 	}
 	delete engine;
 	SDL_Quit();
-	printf("¿©À¸±â\n");
 	return 0;
 }
